@@ -35,12 +35,11 @@ export default class Minavbar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Inicio</NavLink>
+                <NavLink href="/Homepage/">Inicio</NavLink>
               </NavItem>
               <NavItem>
-              <NavLink href="/components/">Mis tareas</NavLink>
+              <NavLink href="/Tareas/">Mis tareas</NavLink>
               </NavItem>
-             
             </Nav>
           </Collapse>
         </Navbar>
