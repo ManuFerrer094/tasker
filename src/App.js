@@ -2,9 +2,9 @@ import React from 'react';
 import Minavbar from './Minavbar'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Homepage from './Homepage';
-import Tareas from './Tareas';
-import Contacto from './Contacto';
+import Homepage from './Componentes/Homepage';
+import Tareas from './Componentes/Tareas';
+import Contacto from './Componentes/Contacto';
 
 class App extends React.Component {
   render() {

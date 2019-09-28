@@ -11,6 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+  import {Link} from 'react-router-dom';
 
 export default class Minavbar extends React.Component {
   constructor(props) {
@@ -29,16 +30,19 @@ export default class Minavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="dark" light expand="md">
           <NavbarBrand href="/">TASKER</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/Homepage/">Inicio</NavLink>
+                <NavLink><Link to="/Homepage/">Inicio</Link></NavLink>
               </NavItem>
               <NavItem>
-              <NavLink href="/Tareas/">Mis tareas</NavLink>
+              <NavLink><Link to="/Tareas/">Mis tareas</Link></NavLink>
+              </NavItem>
+              <NavItem>
+              <NavLink><Link to="/Contacto/">Contacto</Link></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
