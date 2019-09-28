@@ -1,11 +1,11 @@
 import React from "react";
+import FixedContainer from "./FixedContainer";
  
 class Contacto extends React.Component {
   render() {
     return (
       <div>
-        <h1>Contact</h1>
-        <div>Form...</div>
+       
       </div>
     );
   }

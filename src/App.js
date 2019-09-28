@@ -2,9 +2,8 @@ import React from 'react';
 import Minavbar from './Minavbar'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Homepage from './Componentes/Homepage';
-import Tareas from './Componentes/Tareas';
-import Contacto from './Componentes/Contacto';
+
+import FixedContainer from './Componentes/FixedContainer';
 
 class App extends React.Component {
   render() {
@@ -12,14 +11,7 @@ class App extends React.Component {
       <Router>
         <div>
           <Minavbar></Minavbar>
- 
-          <Switch>
-            <Route path="/homepage" component={Homepage}/> 
-            <Route path="/tareas" component={Tareas} />
-            <Route path="/contacto" component={Contacto} />
-          </Switch>
- 
-         
+          <FixedContainer></FixedContainer>
         </div>
       </Router>
     );
