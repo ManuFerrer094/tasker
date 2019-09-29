@@ -5,6 +5,7 @@ import './App.css';
 
 import FixedContainer from './Componentes/FixedContainer';
 
+
 class App extends React.Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class App extends React.Component {
         <div>
           <Minavbar></Minavbar>
           <FixedContainer></FixedContainer>
+         
         </div>
       </Router>
     );
