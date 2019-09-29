@@ -13,7 +13,8 @@ class App extends React.Component {
         <div>
           <Minavbar></Minavbar>
           <FixedContainer></FixedContainer>
-         
+
+
         </div>
       </Router>
     );
