@@ -4,14 +4,16 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
   NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
   import {Link} from 'react-router-dom';
+  import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+
+// Be sure to include styles at some point, probably during your bootstraping
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 export default class Minavbar extends React.Component {
   constructor(props) {
@@ -30,23 +32,55 @@ export default class Minavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" light expand="md">
-          <NavbarBrand href="/">TASKER</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
+        <SideNav
+    onSelect={(selected) => {
+        // Add your code here
+    }}
+>
+    <SideNav.Toggle />
+    <SideNav.Nav defaultSelected="home">
+        <NavItem eventKey="home">
+            <NavIcon>
+                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+            </NavIcon>
+            <NavText>
+            <NavItem>
                 <NavLink><Link to="/Homepage/">Inicio</Link></NavLink>
               </NavItem>
-              <NavItem>
-              <NavLink><Link to="/Tareas/">Mis tareas</Link></NavLink>
+            </NavText>
+        </NavItem>
+        <NavItem eventKey="home">
+            <NavIcon>
+                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+            </NavIcon>
+            <NavText>
+            <NavItem>
+                <NavLink><Link to="/Cursos/">Cursos</Link></NavLink>
               </NavItem>
-              <NavItem>
-              <NavLink><Link to="/Contacto/">Contacto</Link></NavLink>
+            </NavText>
+        </NavItem>
+        <NavItem eventKey="home">
+            <NavIcon>
+                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+            </NavIcon>
+            <NavText>
+            <NavItem>
+                <NavLink><Link to="/Tareas/">Tareas</Link></NavLink>
               </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
+            </NavText>
+        </NavItem>
+        <NavItem eventKey="home">
+            <NavIcon>
+                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+            </NavIcon>
+            <NavText>
+            <NavItem>
+                <NavLink><Link to="/Contacto/">Contacto</Link></NavLink>
+              </NavItem>
+            </NavText>
+        </NavItem>
+    </SideNav.Nav>
+</SideNav>
       </div>
     );
   }

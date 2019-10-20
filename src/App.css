@@ -22,3 +22,39 @@
 .App-link {
   color: #ffffff;
 }
+.carta{
+	display: inline-block;
+    width: 50%;
+  margin: 15px auto;
+  
+}
+.carta  img{
+  width:100%;
+  max-width:400px;
+}
+.carta:hover img{
+	transform: scale(0.97);
+}
+.centered{
+  display: inline-block;
+    width: 50%;
+  margin: 50px auto;
+  
+}
+.cartaGrande{
+  background-color: rgb(36, 36, 36);
+  padding: 15px;
+  max-width: 46%;
+  margin: 22px auto;
+  color: #ffffff;
+
+
+}
+.card-body{
+  color: black;
+}
+.cartaGrande:hover{
+transform: scale(1.02);
+ background-color: #333;
+}
+
